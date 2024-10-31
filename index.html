@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const date = new Date().toISOString().slice(0,11);
+
+    const reg_schedule = [
+        {name: 'P1', start: "8:30", end: "10:00"},
+        {name: 'P2', start: "10:08", end: "11:42"},
+        {name: 'Lunch', start: "11:42", end: "12:14"},
+        {name: "P3", start: "12:22", end: "13:52"},
+        {name: "P4", start: "14:00", end: "15:30"}
+    ];
+    const homeroom_dates = ['2024-8-15', '2024-8-22', '2024-8-29', '2024-9-5', '2024-9-12', '2024-9-26', '2024-10-3', '2024-10-18', '2024-10-24', '2024-10-31', '2024-11-7', '2024-11-21', '2024-12-5', '2024-12-12','2025-1-9', '2025-1-16','2025-1-23','2025-2-6','2025-2-13','2025-2-20','2025-2-28', '2025-3-6', '2025-3-13', '2025-3-27', '2025-4-17','2025-5-1','2025-5-8','2025-5-15']
+
+    const homeroom_schedule = [
+        {name: 'P1', start: "8:30", end: "9:50"},
+        {name: 'P2', start: "9:58", end: "11:18"},
+        {name: "Homeroom", start: "11:26", end: "12:01"},
+        {name: 'Lunch', start: "12:01", end: "12:34"},
+        {name: "P3", start: "12:42", end: "14:02"},
+        {name: "P4", start: "14:10", end: "15:30"}
+    ];
+    const get_day = (date) => {
+        if (homeroom_dates.includes(date)) {
+            return homeroom_schedule;
+        }
+        return reg_schedule;
+    }
+
+    const get_period = (schedule, time) => {
+
+    }
+    
+    const sched = get_day(date);
+
+    const time=new Date().toLocaleTimeString()
+    get_period(sched, "")
+</script>
+</html>
